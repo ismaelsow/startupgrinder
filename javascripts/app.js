@@ -86,7 +86,7 @@ function totalScore(){
 
 
 function handleSuccess(score) {
-  document.querySelector("#subtitle").innerHTML = `Bootstrapping score: <span class="bg-gradient" style="display:inline-block;border-radius:8px;font-weight:bold;background-color:rgb(0, 188, 135);padding:8px">${score}/10&nbsp;&nbsp;TRY IT?</span>`
+  document.querySelector("#subtitle").innerHTML = `Bootstrapping score: <span class="bg-gradient" style="display:inline-block;border-radius:8px;font-weight:bold;background-color:rgb(0, 188, 135);padding:8px">${score}/10&nbsp;&nbsp;TRY IT!</span>`
   document.querySelector("#subtitle").style.paddingBottom = "12px"
   document.querySelector("#success-picture").setAttribute("src", window.wins[Math.round(Math.random() * (window.wins.length - 1))]);
   document.querySelector("#wait-animation").style.display = "block";
@@ -102,7 +102,7 @@ function handleSuccess(score) {
 
 function handleFailure(score) {
   document.querySelector("#wait-animation").style.display = "block";
-  document.querySelector("#subtitle").innerHTML = `Bootstrapping score: <span class="bg-danger bg-gradient" style="display:inline-block;border-radius:8px;font-weight:bold;padding:8px">${score}/10&nbsp;&nbsp;KILL IT!</span>`;
+  document.querySelector("#subtitle").innerHTML = `Bootstrapping score: <span class="bg-danger bg-gradient" style="display:inline-block;border-radius:8px;font-weight:bold;padding:8px">${score}/10&nbsp;&nbsp;LET'S KILL IT!</span>`;
   document.querySelector("#subtitle").style.paddingBottom = "12px"
   var audio = new Audio('audio/failure.mp3');
   audio.play();

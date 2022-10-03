@@ -158,10 +158,10 @@ document.querySelector("#summon-the-grinder").addEventListener("click", function
 
   let score = totalScore();
 
-  if (score >= 8) {
+  if (score >= 9) {
     handleSuccess(score);
   }
-  else if (score >= 6) {
+  else if (score >= 7) {
     handleMiddle(score);
   }
   else {

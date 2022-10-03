@@ -255,13 +255,7 @@
             <img id="success-picture" src="" style="display:block;border-radius:8px" />
           </div>
 
-          <div id="failure" style="display:none">
-            <video id="video-js" class="video-js vjs-fluid" controls preload="auto" poster="" data-setup='{"aspectRatio":"640:360"}'>
-              <source src="" type="video/mp4" />
-              <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that
-              <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-              </p>
-            </video>
+          <div id="failure" style="display:none"> 
           </div>
 
           <div id="follow-on-twitter" style="padding-top:36px;display:none;font-size:18px">
@@ -307,66 +301,11 @@
     ];
 
     let fatalities = [
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/baraka_1.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/baraka_2.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/cage_1.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/cage_2.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/cage_3.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/cinder.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/combo.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/fulgore.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/glacius.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/goro_1.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/goro_2.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/goro_3.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/goro_4.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/jago.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/jax_1.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/jax_2.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/kitana_1.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/kitana_2.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/kung_lao_1.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/kung_lao_2.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/kung_lao_3.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/kung_lao_4.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/mileena_1.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/mileena_2.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/mileena_3.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/orchid.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/raiden_1.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/raiden_2.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/raptor.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/reptile_1.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/reptile_2.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/reptile_3.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/sabrewulf.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/scorpion_1.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/scorpion_2.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/scorpion_3.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/scorpion_4.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/shang_tsung_1.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/shang_tsung_2.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/shang_tsung_3.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/shao_kahn_1.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/shao_kahn_2.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/shao_kahn_3.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/shao_kahn_4.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/shao_kahn_5.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/spinal.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/sub_zero_1.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/sub_zero_2.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/sub_zero_3.mp4",
-      "https://glenleads-public.s3.us-west-1.amazonaws.com/thunder.mp4"
+      "471mxiaaxf"
     ];
 
-    if (getOS() === 'iOS' || getOS() === 'Android') {
-      document.querySelector("#video-js").setAttribute("playsinline");
-      document.querySelector("#video-js").setAttribute("muted");
-      document.querySelector("#video-js").setAttribute("autoplay");
-    }
-
-    var player = videojs('video-js');
-    player.src({type: 'video/mp4', src: fatalities[Math.round(Math.random() * (fatalities.length - 1))]});
+    let videoId = fatalities[Math.round(Math.random() * (fatalities.length - 1))];
+    loadVideo(videoId);
   </script>
   </body>
 

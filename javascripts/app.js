@@ -1,24 +1,6 @@
-function getOS() {
-  var userAgent = window.navigator.userAgent,
-    platform = window.navigator?.userAgentData?.platform || window.navigator.platform,
-    macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K', 'macOS'],
-    windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
-    iosPlatforms = ['iPhone', 'iPad', 'iPod'],
-    os = null;
-
-  if (macosPlatforms.indexOf(platform) !== -1) {
-    os = 'Mac OS';
-  } else if (iosPlatforms.indexOf(platform) !== -1) {
-    os = 'iOS';
-  } else if (windowsPlatforms.indexOf(platform) !== -1) {
-    os = 'Windows';
-  } else if (/Android/.test(userAgent)) {
-    os = 'Android';
-  } else if (/Linux/.test(platform)) {
-    os = 'Linux';
-  }
-
-  return os;
+function loadVideo(videoId) {
+  let videoHTML = `<script src="https://fast.wistia.com/embed/medias/471mxiaaxf.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:75.0% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_471mxiaaxf videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/${videoId}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>`;
+  document.querySelector("#failure").innerHTML = videoHTML;
 }
 
 
@@ -133,10 +115,7 @@ function handleFailure(score) {
   setTimeout(() => {
     document.querySelector("#wait-animation").style.display = "none";
     document.querySelector("#failure").style.display = "block";
-    player.ready(function() {
-      player.play();
-      document.querySelector("#follow-on-twitter").style.display = "block";
-    });
+    document.querySelector("#follow-on-twitter").style.display = "block";
   }, 3500);
 }
 

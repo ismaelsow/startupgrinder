@@ -359,6 +359,12 @@
       "https://glenleads-public.s3.us-west-1.amazonaws.com/thunder.mp4"
     ];
 
+    if (getOS() === 'iOS' || getOS() === 'Android') {
+      document.querySelector("#video-js").setAttribute("playsinline");
+      document.querySelector("#video-js").setAttribute("muted");
+      document.querySelector("#video-js").setAttribute("autoplay");
+    }
+
     var player = videojs('video-js');
     player.src({type: 'video/mp4', src: fatalities[Math.round(Math.random() * (fatalities.length - 1))]});
   </script>

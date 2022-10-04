@@ -140,7 +140,6 @@ document.querySelector("#summon-the-grinder").addEventListener("click", function
 
   document.querySelector("#intro").style.display = "none";
   document.querySelector("#grinder-form").style.display = "none";
-  document.querySelector("body").style.backgroundColor = "#000000";
 
   let score = totalScore();
   if (score >= 9) {

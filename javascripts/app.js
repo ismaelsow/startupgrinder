@@ -92,13 +92,11 @@ function handleSuccess(score) {
   document.querySelector("#subtitle").style.paddingBottom = "12px"
   document.querySelector("#success-picture").setAttribute("src", window.wins[Math.round(Math.random() * (window.wins.length - 1))]);
   document.querySelector("#wait-animation").style.display = "block";
-  setTimeout(() => {
-    var audio = new Audio('audio/success.mp3');
-    audio.play();
-    document.querySelector("#wait-animation").style.display = "none";
-    document.querySelector("#success").style.display = "block";
-    document.querySelector("#follow-on-twitter").style.display = "block";
-  }, 1500);
+  var audio = new Audio('audio/success.mp3');
+  audio.play();
+  document.querySelector("#wait-animation").style.display = "none";
+  document.querySelector("#success").style.display = "block";
+  document.querySelector("#follow-on-twitter").style.display = "block";
 }
 
 
@@ -107,13 +105,11 @@ function handleMiddle(score) {
   document.querySelector("#subtitle").style.paddingBottom = "12px"
   document.querySelector("#success-picture").setAttribute("src", window.fines[Math.round(Math.random() * (window.fines.length - 1))]);
   document.querySelector("#wait-animation").style.display = "block";
-  setTimeout(() => {
-    var audio = new Audio('audio/middle.mp3');
-    audio.play();
-    document.querySelector("#wait-animation").style.display = "none";
-    document.querySelector("#success").style.display = "block";
-    document.querySelector("#follow-on-twitter").style.display = "block";
-  }, 1500);
+  var audio = new Audio('audio/middle.mp3');
+  audio.play();
+  document.querySelector("#wait-animation").style.display = "none";
+  document.querySelector("#success").style.display = "block";
+  document.querySelector("#follow-on-twitter").style.display = "block";
 }
 
 

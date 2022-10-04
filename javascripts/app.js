@@ -8,12 +8,6 @@ function loadVideo(videoId) {
 
 function isFormValid() {
   valid = true;
-  if (!document.querySelector("#problem").value){
-    valid = false;
-  }
-  if (!document.querySelector("#solution").value){
-    valid = false;
-  }
   if (!document.querySelector("input[name='missionCritical']:checked")){
     valid = false;
   }
@@ -94,7 +88,7 @@ function totalScore(){
 
 
 function handleSuccess(score) {
-  document.querySelector("#subtitle").innerHTML = `Bootstrapping score: <span class="bg-gradient" style="display:inline-block;border-radius:8px;font-weight:bold;background-color:rgb(0, 188, 135);padding:8px">${score}/10&nbsp;&nbsp;DO IT!</span>`
+  document.querySelector("#subtitle").innerHTML = `<strong>Your bootstrapping score</strong>: <span class="bg-gradient" style="display:inline-block;border-radius:8px;font-weight:bold;background-color:rgb(0, 188, 135);padding:8px">${score}/10&nbsp;&nbsp;DO IT!</span>`
   document.querySelector("#subtitle").style.paddingBottom = "12px"
   document.querySelector("#success-picture").setAttribute("src", window.wins[Math.round(Math.random() * (window.wins.length - 1))]);
   document.querySelector("#wait-animation").style.display = "block";
@@ -109,7 +103,7 @@ function handleSuccess(score) {
 
 
 function handleMiddle(score) {
-  document.querySelector("#subtitle").innerHTML = `Bootstrapping score: <span class="bg-warning bg-gradient" style="display:inline-block;border-radius:8px;font-weight:bold;background-color:rgb(0, 188, 135);padding:8px">${score}/10&nbsp;&nbsp;TRY IT?</span>`
+  document.querySelector("#subtitle").innerHTML = `<strong>Your bootstrapping score</strong>: <span class="bg-warning bg-gradient" style="display:inline-block;border-radius:8px;font-weight:bold;background-color:rgb(0, 188, 135);padding:8px">${score}/10&nbsp;&nbsp;TRY IT?</span>`
   document.querySelector("#subtitle").style.paddingBottom = "12px"
   document.querySelector("#success-picture").setAttribute("src", window.fines[Math.round(Math.random() * (window.fines.length - 1))]);
   document.querySelector("#wait-animation").style.display = "block";
@@ -125,7 +119,7 @@ function handleMiddle(score) {
 
 function handleFailure(score) {
   document.querySelector("#wait-animation").style.display = "block";
-  document.querySelector("#subtitle").innerHTML = `Bootstrapping score: <span class="bg-danger bg-gradient" style="display:inline-block;border-radius:8px;font-weight:bold;padding:8px">${score}/10&nbsp;&nbsp;LET'S KILL IT!</span>`;
+  document.querySelector("#subtitle").innerHTML = `<strong>Your bootstrapping score</strong>: <span class="bg-danger bg-gradient" style="display:inline-block;border-radius:8px;font-weight:bold;padding:8px">${score}/10&nbsp;&nbsp;LET'S KILL IT!</span>`;
   document.querySelector("#subtitle").style.paddingBottom = "12px"
   var audio = new Audio('audio/failure.mp3');
   audio.play();
@@ -149,7 +143,6 @@ document.querySelector("#summon-the-grinder").addEventListener("click", function
   document.querySelector("body").style.backgroundColor = "#000000";
 
   let score = totalScore();
-
   if (score >= 9) {
     handleSuccess(score);
   }
